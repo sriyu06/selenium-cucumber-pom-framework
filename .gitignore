@@ -1,0 +1,20 @@
+# Build output and generated reports/screenshots
+target/
+out/
+*.log
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local secrets (never commit)
+.env
+*.secret
