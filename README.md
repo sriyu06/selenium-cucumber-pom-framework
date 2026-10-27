@@ -2,8 +2,6 @@
 
 A UI test-automation framework for the [SauceDemo](https://www.saucedemo.com/) demo shop, built with Java, Selenium WebDriver, Cucumber BDD, TestNG and the Page Object Model. It is a learning / portfolio project.
 
-> **Status:** Add your own verified results in the "Sample execution results" section after you run the suite on your machine.
-
 ## Objectives
 
 - Practise a clean separation of test intent (Gherkin), test glue (step definitions) and page interaction (page objects).
@@ -28,7 +26,6 @@ selenium-cucumber-pom-framework/
 ├── pom.xml                         Dependencies and plugins
 ├── README.md
 ├── .gitignore
-├── docs/INTERVIEW_PREP.md          Interview questions based on this project
 └── src/test/
     ├── java/
     │   ├── pages/                  Page objects (locators + page actions)
@@ -49,10 +46,6 @@ selenium-cucumber-pom-framework/
 2. Maven 3.8+ (`mvn -version`)
 3. Google Chrome (default). Firefox or Edge also work.
 4. Internet access (the tests hit saucedemo.com; Selenium Manager downloads the driver on first run)
-
-## Configuration
-
-Edit `src/test/resources/config.properties`, or override any value on the command line:
 
 | Key | Default | Meaning |
 |-----|---------|---------|
@@ -127,21 +120,3 @@ Feature file (Gherkin)  ->  Step definition  ->  Page object  ->  Selenium WebDr
 - **TestRunner** extends `AbstractTestNGCucumberTests`; each scenario becomes a TestNG test and Surefire runs this single class.
 - **Reliability:** explicit waits only (no `Thread.sleep`, no implicit wait), no retry mechanism.
 
-## Sample execution results
-
-Not yet recorded. After running `mvn clean test` on your machine, paste the real console summary and the date here, for example:
-
-```
-Tests run: <n>, Failures: <n>, Errors: <n>, Skipped: <n>
-```
-
-## Known limitations and future improvements
-
-- Assertions on SauceDemo error texts depend on the site's current wording.
-- Scenarios run sequentially (parallel execution is prepared but not enabled).
-- Only UI tests; no API layer.
-- Ideas: GitHub Actions CI workflow, Allure or Extent reporting, parallel execution, data-driven users, API tests with REST Assured.
-
-## License
-
-For learning and portfolio use.
